@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Houzzvibes to book a consultation for luxury modern interior design services.">
+  <title>Contact | Houzzvibes</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Houzzvibes home">Houzzvibes</a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" data-nav>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero section-pad">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h1>Tell us about your home.</h1>
+        <p>Share your room type, budget, timeline, and style direction. We respond within two business days with next steps for a design consultation.</p>
+        <div class="contact-details">
+          <p><strong>Email</strong> hello@houzzvibes.com</p>
+          <p><strong>Phone</strong> +91 98765 43210</p>
+          <p><strong>Studio</strong> Mumbai / Delhi / Remote projects</p>
+        </div>
+      </div>
+      <form class="contact-form" action="#" method="post">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Service
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Full home interior</option>
+            <option>Bedroom design</option>
+            <option>Kitchen and dining</option>
+            <option>Furniture and styling</option>
+            <option>Renovation consultation</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Tell us about the space, location, timeline, and budget." required></textarea>
+        </label>
+        <button class="btn btn--dark" type="submit">Send enquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand" href="index.html">Houzzvibes</a>
+      <p>Luxury modern interiors for residential spaces, boutique homes, and curated living.</p>
+    </div>
+    <div>
+      <p>hello@houzzvibes.com</p>
+      <p>+91 98765 43210</p>
+      <p>Mumbai / Delhi / Remote</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
