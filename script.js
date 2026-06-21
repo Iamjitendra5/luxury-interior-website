@@ -5,6 +5,7 @@ if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
     document.body.classList.toggle("nav-open", isOpen);
+    document.documentElement.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   });
@@ -23,6 +24,7 @@ if (navToggle && nav) {
 
     nav.classList.remove("open");
     document.body.classList.remove("nav-open");
+    document.documentElement.classList.remove("nav-open");
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Open navigation");
   });
@@ -136,65 +138,6 @@ dropdownItems.forEach((item) => {
   }
 });
 
-// Gallery Filter click handler from within mega menu
-const filterLinks = document.querySelectorAll("[data-filter-link]");
-filterLinks.forEach((card) => {
-  card.addEventListener("click", (e) => {
-    const category = card.getAttribute("data-filter-link");
-    
-    // Store in localStorage for cross-page navigation
-    localStorage.setItem("gallery-filter", category);
-
-    // If on home/index page, let's trigger it immediately
-    const filterBtn = document.querySelector(`.filter-bar button[data-filter="${category}"]`);
-    if (filterBtn) {
-      filterBtn.click();
-      const gallerySection = document.getElementById("gallery");
-      if (gallerySection) {
-        gallerySection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  });
-});
-
-// Cross-Page Load Filter Apply
-window.addEventListener("DOMContentLoaded", () => {
-  const pendingFilter = localStorage.getItem("gallery-filter");
-  if (pendingFilter) {
-    localStorage.removeItem("gallery-filter");
-    
-    const filterBtn = document.querySelector(`.filter-bar button[data-filter="${pendingFilter}"]`);
-    if (filterBtn) {
-      // Delay click slightly to ensure layout and scroll trigger are initialized
-      setTimeout(() => {
-        filterBtn.click();
-        const gallerySection = document.getElementById("gallery");
-        if (gallerySection) {
-          gallerySection.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 350);
-    }
-  }
-});
-
-
-const filterButtons = document.querySelectorAll("[data-filter]");
-const galleryItems = document.querySelectorAll("[data-category]");
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-
-    filterButtons.forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-
-    galleryItems.forEach((item) => {
-      const shouldShow = filter === "all" || item.dataset.category === filter;
-      item.classList.toggle("is-hidden", !shouldShow);
-    });
-  });
-});
-
 const canAnimate = window.gsap && window.ScrollTrigger && !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (canAnimate) {
@@ -206,6 +149,17 @@ if (canAnimate) {
     duration: 0.75,
     ease: "power3.out"
   });
+
+  // Animate collection page headers
+  if (document.querySelector(".collection-header")) {
+    gsap.from(".breadcrumbs, .collection-title, .collection-intro", {
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      stagger: 0.12
+    });
+  }
 
   gsap.from(".hero__kicker, .hero h1, .hero__content-bottom, .hero__image", {
     y: 46,
@@ -226,7 +180,7 @@ if (canAnimate) {
     }
   });
 
-  gsap.utils.toArray("section:not(.hero), .project, .gallery-grid figure, .service-list article, .process-grid article, .values-section article").forEach((element) => {
+  gsap.utils.toArray("section:not(.hero), .project, .editorial-card, .gallery-item, .service-list article, .process-grid article, .values-section article").forEach((element) => {
     gsap.from(element, {
       y: 44,
       opacity: 0,
@@ -240,7 +194,7 @@ if (canAnimate) {
     });
   });
 
-  gsap.utils.toArray(".hero__image:not(.hero__slider) img, .project img, .page-hero img").forEach((image) => {
+  gsap.utils.toArray(".hero__image:not(.hero__slider) img, .project img, .page-hero img, .gallery-item img").forEach((image) => {
     gsap.fromTo(image, {
       scale: 1.08
     }, {

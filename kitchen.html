@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VC Designs creates luxury modern interiors, residential design, furniture curation, styling, and full-service renovations.">
-  <title>VC Designs | Luxury Modern Interior Design</title>
+  <meta name="description" content="Explore the Kitchen design collection by VC Designs, featuring luxury marble details, modern layouts, and premium custom oak cabinetry.">
+  <title>Kitchen Collection | VC Designs</title>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=675&q=85">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -100,7 +100,7 @@
       </div>
 
       <div class="site-nav-item" data-dropdown="gallery">
-        <a href="index.html#gallery" class="nav-link-main">Gallery</a>
+        <a href="index.html#gallery" class="nav-link-main" aria-current="page">Gallery</a>
         <div class="mega-dropdown" aria-hidden="true">
           <div class="mega-dropdown__container">
             <div class="mega-dropdown__grid mega-dropdown__grid--five">
@@ -164,249 +164,47 @@
   </header>
 
   <main>
-    <section class="hero section-pad">
-      <div class="hero__kicker">Luxury Interior Design Studio</div>
-      <h1>Design Your Story, Live Your Style</h1>
-      
-      <!-- Dominant visual: Premium responsive image slider -->
-      <div class="hero__slider hero__image hero__image--full" role="region" aria-label="Luxury interior design showcase slider" tabindex="0">
-        <div class="hero__slides">
-          <!-- Slide 1: Modern Living Room -->
-          <div class="hero__slide is-active" data-slide="0" aria-roledescription="slide" aria-label="1 of 4: Modern Living Room">
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85" alt="Warm Scandinavian-style modern living room with neutral tones">
-          </div>
-          <!-- Slide 2: Luxury Bedroom -->
-          <div class="hero__slide" data-slide="1" aria-hidden="true" aria-roledescription="slide" aria-label="2 of 4: Luxury Bedroom">
-            <img data-src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=85" alt="Minimalist luxury bedroom suite with soft warm ambient lighting" class="lazy-slide">
-          </div>
-          <!-- Slide 3: Contemporary Kitchen -->
-          <div class="hero__slide" data-slide="2" aria-hidden="true" aria-roledescription="slide" aria-label="3 of 4: Contemporary Kitchen">
-            <img data-src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85" alt="Contemporary luxury kitchen with clean lines and oak accents" class="lazy-slide">
-          </div>
-          <!-- Slide 4: Elegant Dining Space -->
-          <div class="hero__slide" data-slide="3" aria-hidden="true" aria-roledescription="slide" aria-label="4 of 4: Elegant Dining Space">
-            <img data-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85" alt="Elegant dining space with natural wood furnishings and custom pendant lighting" class="lazy-slide">
-          </div>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button class="hero__slider-arrow hero__slider-arrow--prev" aria-label="Previous slide" type="button">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        <button class="hero__slider-arrow hero__slider-arrow--next" aria-label="Next slide" type="button">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-
-        <!-- Dot Indicators -->
-        <div class="hero__slider-dots" role="tablist" aria-label="Select slides">
-          <button class="hero__slider-dot is-active" role="tab" aria-selected="true" aria-label="Go to slide 1" data-dot="0" type="button"></button>
-          <button class="hero__slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 2" data-dot="1" type="button"></button>
-          <button class="hero__slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 3" data-dot="2" type="button"></button>
-          <button class="hero__slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 4" data-dot="3" type="button"></button>
-        </div>
-      </div>
-
-      <!-- Centered description and actions -->
-      <div class="hero__content-bottom">
-        <p class="hero__paragraph-centered">From full home renovations to furniture, lighting, and bespoke styling, VC Designs creates refined interiors that feel calm, personal, and deeply usable.</p>
-        <div class="hero__actions-centered">
-          <a class="btn btn--dark" href="contact.html">Book a consultation</a>
-          <a class="text-link" href="#portfolio">View portfolio</a>
-        </div>
-      </div>
+    <section class="collection-header section-pad">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="index.html#gallery">Gallery</a>
+        <span class="separator">/</span>
+        <span class="current">Kitchen</span>
+      </nav>
+      <h1 class="collection-title">Kitchen</h1>
+      <p class="collection-intro">Bespoke workspaces balance architectural precision with warm materials. Designed for the art of cooking and hospitality, utilizing solid stone and flat oak cabinetry.</p>
     </section>
 
-    <section class="marquee" aria-label="Studio highlights">
-      <span>Residential interiors</span>
-      <span>Space planning</span>
-      <span>Furniture</span>
+    <!-- Refined 1-column vertically-stacked layout -->
+    <section class="collection-gallery">
+      <figure class="gallery-item">
+        <!-- Preloaded above-the-fold image -->
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=675&q=85" alt="Premium modern kitchen with custom marble island counter and task lighting" width="1200" height="675">
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1200&h=675&q=85" alt="Dark modern kitchen styling with built-in downlights and marble panels" loading="lazy" width="1200" height="675">
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&h=675&q=85" alt="Minimal flat-panel kitchen cabinets in a warm beige hue" loading="lazy" width="1200" height="675">
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&h=675&q=85" alt="Handcrafted oak cabinet drawers showcasing storage solutions" loading="lazy" width="1200" height="675">
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?auto=format&fit=crop&w=1200&h=675&q=85" alt="Kitchen sink details featuring brass faucet fittings and stone backsplash" loading="lazy" width="1200" height="675">
+      </figure>
     </section>
 
-    <section class="section-pad split-section" id="services">
-      <div>
-        <p class="eyebrow">Services</p>
-        <h2>Every detail considered, from first sketch to final object.</h2>
-      </div>
-      <div class="service-list">
-        <article id="service-full-home">
-          <span>01</span>
-          <div>
-            <h3>Full Home Interiors</h3>
-            <p>Concept design, floor planning, finishes, furnishing, site coordination, and installation for apartments, villas, and penthouses.</p>
-          </div>
-        </article>
-        <article id="service-kitchen-dining">
-          <span>02</span>
-          <div>
-            <h3>Kitchen & Dining Design</h3>
-            <p>Functional layouts, custom cabinetry, island planning, materials, lighting, appliances, and dining experiences that feel effortless.</p>
-          </div>
-        </article>
-        <article id="service-bedroom">
-          <span>03</span>
-          <div>
-            <h3>Bedroom Suites</h3>
-            <p>Soft palettes, wardrobes, statement beds, lighting scenes, and layered textures for private rooms that restore and impress.</p>
-          </div>
-        </article>
-        <article id="service-furniture-styling">
-          <span>04</span>
-          <div>
-            <h3>Furniture & Styling</h3>
-            <p>Custom furniture, art direction, accessories, textiles, rugs, and procurement for spaces that need a polished final layer.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section-pad project-section" id="portfolio">
-      <div class="section-heading">
-        <p class="eyebrow">Portfolio</p>
-        <h2>Selected residential projects.</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project project--wide">
-          <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1300&q=85" alt="Luxury bedroom with neutral bedding and soft lighting">
-          <div>
-            <p>Private Villa</p>
-            <h3>Quiet master suite with hotel-level comfort.</h3>
-          </div>
-        </article>
-        <article class="project">
-          <img src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=900&q=85" alt="Modern kitchen with marble island and pendant lights">
-          <div>
-            <p>City Apartment</p>
-            <h3>Stone kitchen and dining room for daily hosting.</h3>
-          </div>
-        </article>
-        <article class="project">
-          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="Contemporary living room with custom sofa and artwork">
-          <div>
-            <p>Residence Renovation</p>
-            <h3>Warm living area with curated furniture pieces.</h3>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section-pad editorial-gallery" id="gallery">
-      <div class="section-heading">
-        <p class="eyebrow">Gallery</p>
-        <h2>Explore by room.</h2>
-      </div>
-      <div class="editorial-gallery__grid">
-        <!-- Card 1: Living Room -->
-        <a class="editorial-card" href="living-room.html">
-          <div class="editorial-card__image-container">
-            <img class="editorial-card__image" src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=800&h=450&q=85" alt="Warm Scandinavian Living Room" loading="lazy" width="800" height="450">
-          </div>
-          <div class="editorial-card__content">
-            <h3 class="editorial-card__title">Living Room</h3>
-            <p class="editorial-card__desc">Refined seating concepts and open layouts balancing warm natural lighting with functional simplicity.</p>
-            <span class="editorial-card__link">Explore Collection <span class="editorial-card__arrow">→</span></span>
-          </div>
-        </a>
-
-        <!-- Card 2: Bedroom -->
-        <a class="editorial-card" href="bedroom.html">
-          <div class="editorial-card__image-container">
-            <img class="editorial-card__image" src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&h=450&q=85" alt="Cozy Scandinavian Bedroom" loading="lazy" width="800" height="450">
-          </div>
-          <div class="editorial-card__content">
-            <h3 class="editorial-card__title">Bedroom</h3>
-            <p class="editorial-card__desc">Quiet, personal sanctuary suites designed with organic textures, linen bedding, and soft lighting.</p>
-            <span class="editorial-card__link">Explore Collection <span class="editorial-card__arrow">→</span></span>
-          </div>
-        </a>
-
-        <!-- Card 3: Modern Furniture -->
-        <a class="editorial-card" href="modern-furniture.html">
-          <div class="editorial-card__image-container">
-            <img class="editorial-card__image" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&h=450&q=85" alt="Minimalist Scandinavian Furniture" loading="lazy" width="800" height="450">
-          </div>
-          <div class="editorial-card__content">
-            <h3 class="editorial-card__title">Modern Furniture</h3>
-            <p class="editorial-card__desc">Sculptural dining chairs, oak tables, and bespoke storage solutions with premium craftsmanship.</p>
-            <span class="editorial-card__link">Explore Collection <span class="editorial-card__arrow">→</span></span>
-          </div>
-        </a>
-
-        <!-- Card 4: Kitchen -->
-        <a class="editorial-card" href="kitchen.html">
-          <div class="editorial-card__image-container">
-            <img class="editorial-card__image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=450&q=85" alt="Luxury Modern Kitchen" loading="lazy" width="800" height="450">
-          </div>
-          <div class="editorial-card__content">
-            <h3 class="editorial-card__title">Kitchen</h3>
-            <p class="editorial-card__desc">Architectural workspaces utilizing solid marble, bespoke wood cabinets, and integrated details.</p>
-            <span class="editorial-card__link">Explore Collection <span class="editorial-card__arrow">→</span></span>
-          </div>
-        </a>
-
-        <!-- Card 5: Décor Accessories -->
-        <a class="editorial-card" href="decor-accessories.html">
-          <div class="editorial-card__image-container">
-            <img class="editorial-card__image" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&h=450&q=85" alt="Minimalist Décor Accessories" loading="lazy" width="800" height="450">
-          </div>
-          <div class="editorial-card__content">
-            <h3 class="editorial-card__title">Décor Accessories</h3>
-            <p class="editorial-card__desc">Curated artisan ceramics, minimalist vases, and natural highlights that bring the final personal layer.</p>
-            <span class="editorial-card__link">Explore Collection <span class="editorial-card__arrow">→</span></span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="section-pad process-section">
-      <div class="section-heading">
-        <p class="eyebrow">Process</p>
-        <h2>A clear path from ideas to installation.</h2>
-      </div>
-      <div class="process-grid">
-        <article>
-          <span>01</span>
-          <h3>Consult</h3>
-          <p>We learn how you live, what you love, and what the space needs to solve.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Concept</h3>
-          <p>Moodboards, layouts, material direction, and early budgets establish the design language.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Develop</h3>
-          <p>Drawings, furniture, finishes, lighting, vendors, and timelines are refined in detail.</p>
-        </article>
-        <article>
-          <span>04</span>
-          <h3>Install</h3>
-          <p>We coordinate procurement, styling, and the final reveal so every room lands beautifully.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section-pad quote-section">
-      <blockquote>
-        "VC Designs turned an empty apartment into a composed, layered home. The result is elegant without feeling untouchable."
-      </blockquote>
-      <p>vc designs pvt ltd.</p>
-    </section>
-
-    <section class="section-pad cta-section">
-      <h2>Tell us about your home and we'll shape the rest together.</h2>
-      <a class="btn btn--light" href="contact.html">Start your project</a>
+    <section class="collection-actions">
+      <a href="index.html#gallery" class="btn btn--dark">Back to Gallery</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="site-footer__container">
       <div class="site-footer__grid">
-        <!-- Column 1: Brand & Newsletter -->
+        <!-- Column 1: Brand & Description -->
         <div class="site-footer__col">
           <a class="brand site-footer__brand" href="index.html" aria-label="VC Designs home">VC Designs</a>
           <p class="site-footer__desc">Design Your Story, Live Your Style. Creating modern luxury interiors that feel calm, personal, and deeply usable.</p>
